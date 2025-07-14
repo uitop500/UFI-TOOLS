@@ -85,7 +85,7 @@ class MainActivity : ComponentActivity() {
         val isUnSupportDevice = DeviceModelChecker.checkBlackList()
 
         if(isNotUFI) {
-            Toast.makeText(applicationContext, "App仅可在随身wifi上安装使用，手机使用请下载手机直装版，正在退出...", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "App仅可在随身wifi上安出...", Toast.LENGTH_LONG).show()
             Handler(Looper.getMainLooper()).postDelayed({
                 exitProcess(-114514)
             }, 4600)
