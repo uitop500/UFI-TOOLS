@@ -31,9 +31,10 @@ object DeviceModelChecker {
         frimwareWhiteList.forEach{
             if (firmwareVersion.contains(it.trim())) {
                 Log.d("kano_ZTE_LOG_devcheck", "检测到白名单固件，放行")
-                isUnSupportDevice = false
+                
             }
         }
+        isUnSupportDevice = false
         return isUnSupportDevice
     }
 
@@ -41,6 +42,6 @@ object DeviceModelChecker {
         val isUFI_0 = KanoUtils.isAppInstalled(context,"com.zte.web")
         val isUFI = ShellKano.runShellCommand("pm list package")
         Log.d("kano_ZTE_LOG_devcheck", "isUFI_0：${isUFI_0},has com.zte.web? :${isUFI?.contains("com.zte.web")} ")
-        return !(isUFI != null && isUFI.contains("com.zte.web")) || !isUFI_0
+        return false
     }
 }
