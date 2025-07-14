@@ -20,12 +20,12 @@ object DeviceModelChecker {
     )
 
     fun checkBlackList(): Boolean {
-        Toast.makeText(applicationContext, "checkBlackList", Toast.LENGTH_LONG).show()
+ 
         return false
     }
 
     fun checkIsNotUFI(context: Context):Boolean{
-        Toast.makeText(applicationContext, "checkIsNotUFI", Toast.LENGTH_LONG).show()
+
         return false
     }
 }
